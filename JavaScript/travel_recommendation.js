@@ -4,7 +4,7 @@ searchButton.addEventListener("click", fetching);
 function fetching() {
   debugger;
   textInput = document.getElementById("searchInput").value.toLowerCase();
-  fetch("./JavaScript/travel_recommendation_api.json")
+  fetch("travel_recommendation_api.json")
     .then((response) => {
       return response.json();
     })
