@@ -21,10 +21,13 @@ function fetching() {
           const header = document.createElement("h3");
           header.textContent = element.name;
 
-          const img=document.createElement("img");
-          img.src=""
+          const img = document.createElement("img");
+          img.src = "";
           const description = document.createElement("p");
           description = element.description;
+          Div.appendChild(header);
+          Div.appendChild(img);
+          Div.appendChild(p);
         });
       } else if (textInput == "country" || textInput == "countries") {
         data.countries;
