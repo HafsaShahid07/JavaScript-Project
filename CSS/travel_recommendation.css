@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  display: inline;
+}
+.PageLinks a {
+  display: inline;
+  text-decoration-line: none;
+  color: white;
+  margin: 10px;
+}
+.PageLinks {
+  gap: 10px;
+}
+.navbar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #19191b;
+  height: 60px;
+}
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds spacing between the icon and text */
+}
+
+#plane {
+  height: 50px; /* Adjust based on navbar height */
+  width: auto; /* Keeps aspect ratio */
+  object-fit: contain; /* Ensures it fits without overflowing */
+}
+.logo {
+  padding: 10px;
+  height: 80px;
+}
+/* .logo img{
+    left: 0px;
+    height: 60px;
+    position: fixed;
+    width: 70px;
+} */
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#searchInput {
+  height: 20px;
+  padding: 10px;
+  padding-right: 80px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.searchBox #searchButton {
+  background-color: darkcyan;
+  position: absolute;
+  right: 55px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.searchBox #clearButton {
+  background-color: darkcyan;
+  position: absolute;
+  right: 10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+#plane {
+  background-color: #19191b;
+  object-fit: contain;
+}
+.homeContainer {
+  background-image: url(../Images/lakePic.jpg);
+  height: auto;
+  background-size: cover; /* Covers the full container */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full page width */
+  color: white;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  height: 200px;
+  justify-content: space-between;
+}

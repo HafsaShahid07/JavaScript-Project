@@ -1,0 +1,62 @@
+.aboutContainer {
+  background-image: url(../Images/lakePic.jpg);
+  height: auto;
+  background-size: cover; /* Covers the full container */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full page width */
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.hero h1 {
+  font-weight: 900;
+  font-size: xx-large;
+  line-height: 1.05;
+  padding-bottom: 20px;
+}
+.team-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.team-member {
+  background: rgba(0, 0, 0, 0.8);
+  padding-bottom: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  text-align: center;
+  margin: 50px;
+}
+.teamHeading {
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 30px;
+  height: 100px;
+  width: 100%;
+}
+.hero {
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark background for contrast */
+  padding: 15px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+  line-height: 1.6;
+}
