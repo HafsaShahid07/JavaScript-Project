@@ -67,19 +67,4 @@
   color: #555;
 }
 
-/* Button */
-.displayBox .visit-btn {
-  display: inline-block;
-  background: #007bff;
-  color: white;
-  padding: 8px 15px;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 10px;
-  transition: 0.3s;
-}
 
-.display-box .visit-btn:hover {
-  background: #0056b3;
-}
