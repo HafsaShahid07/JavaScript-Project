@@ -1,38 +1,64 @@
 searchButton = document.getElementById("searchButton");
+clearButton=document.getElementById("clearButton")
 searchButton.addEventListener("click", fetching);
-//https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-JS0101EN-SkillsNetwork/travel1.json
+clearButton.addEventListener("click", clearDisplay);
 function fetching() {
   debugger;
-  textInput = document.getElementById("searchInput").value.toLowerCase();
-  fetch("travel_recommendation_api.json")
+  let textInput = document.getElementById("searchInput").value.toLowerCase();
+  fetch(
+    "https://raw.githubusercontent.com/HafsaShahid07/JavaScript-Project/main/travel_recommendation_api.json"
+  )
     .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
       return response.json();
     })
     .then((data) => {
+      let displayContainer = document.getElementById("displayContainer");
+      // displayBox.innerHTML = ""; // Clear previous results
+      displayContainer.classList.add("displayContainer");
       if (
-        textInput == "beach" ||
-        textInput == "beaches" ||
-        textInput == "coast"
+        textInput === "beach" ||
+        textInput === "beaches" ||
+        textInput === "coast"
       ) {
         data.beaches.forEach((element) => {
-          const Div = document.createElement("div");
-          const header = document.createElement("h3");
-          header.textContent = element.name;
-
-          const img = document.createElement("img");
-          img.src = "";
-          const description = document.createElement("p");
-          description = element.description;
-          Div.appendChild(header);
-          Div.appendChild(img);
-          Div.appendChild(p);
+          createDisplayCard(element, displayContainer);
         });
-      } else if (textInput == "country" || textInput == "countries") {
-        data.countries;
-      } else if (textInput == "temple" || textInput == "temples") {
-        data.temples;
+      } else if (textInput === "country" || textInput === "countries") {
+        data.countries.forEach((element) => {
+          element.cities.forEach((city) => {
+            createDisplayCard(city, displayContainer);
+          });
+        });
+      } else if (textInput === "temple" || textInput === "temples") {
+        data.temples.forEach((element) => {
+          createDisplayCard(element, displayContainer);
+        });
       }
-      //   console.log(data.countries);
     })
     .catch((error) => console.error("Error fetching data:", error));
+}
+function createDisplayCard(element, container) {
+  let Div = document.createElement("div");
+  Div.classList.add("displayBox");
+  let img1 = document.createElement("img");
+  img1.src = element.imageUrl;
+
+  let header = document.createElement("h3");
+  header.textContent = element.name;
+
+  let description = document.createElement("p");
+  description.textContent = element.description;
+
+  Div.appendChild(header);
+  Div.appendChild(img1);
+  Div.appendChild(description);
+  container.appendChild(Div);
+}
+
+function clearDisplay() {
+  displayContainer = document.getElementById("displayContainer");
+  displayContainer.innerHTML = "";
 }

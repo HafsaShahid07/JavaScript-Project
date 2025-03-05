@@ -1,0 +1,85 @@
+/* Container that holds the display box */
+/* #displayContainer {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  width: 350px;
+  z-index: 1000;
+} */
+#displayContainer {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  width: 350px;
+  height: 500px; /* Set a fixed height */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  z-index: 1000;
+  padding-right: 10px; /* Prevents scrollbar from overlapping content */
+}
+
+.displayBox {
+  padding: 15px;
+  background: lightgray;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Individual display box */
+.displayBox {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  margin: 8px;
+}
+
+/* Image inside the display box */
+.displayBox img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin: 2px;
+}
+
+.displayBox img:hover {
+  transform: scale(1.05);
+}
+
+/* Text styling */
+.displayBox h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+.displayBox h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.displayBox p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button */
+.displayBox .visit-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.display-box .visit-btn:hover {
+  background: #0056b3;
+}
