@@ -1,5 +1,5 @@
 searchButton = document.getElementById("searchButton");
-clearButton=document.getElementById("clearButton")
+clearButton = document.getElementById("clearButton");
 searchButton.addEventListener("click", fetching);
 clearButton.addEventListener("click", clearDisplay);
 function fetching() {
